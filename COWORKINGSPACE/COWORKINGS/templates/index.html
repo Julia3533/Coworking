@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<h1>Welcome to your personal coworking space!!!</h1>
+<h2>In our app you can collaborate with your classmates or your coworkers. We provide you with a user friendly and easy to navigate space. You can check your daily tasks and progress and add new tasks for yourself and people who work with you. </h2>
+<h2>Projects:</h2>
+<hr>
+{% for project in projects %}
+<h3>{{ project.name }}</h3>
+<hr>
+<p>{{ project.description }}</p>
+{% endfor %}
+
+{% endblock %}

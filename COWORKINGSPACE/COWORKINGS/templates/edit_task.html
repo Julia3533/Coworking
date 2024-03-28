@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2>Edit Task {{ task.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ task.name }}" required>
+
+        <label for="description">Description:</label>
+        <textarea name="description" required>{{ task.description }}</textarea>
+
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}
